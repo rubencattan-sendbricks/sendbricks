@@ -1,13 +1,23 @@
-import { Base44 } from 'base44';
-
-// These would normally come from .env
+// Base44 SDK stub — replace with real SDK when available
 const PROJECT_ID = import.meta.env.VITE_BASE44_PROJECT_ID;
 const API_KEY = import.meta.env.VITE_BASE44_API_KEY;
 
-export const b44 = new Base44({
+export const b44 = {
     projectId: PROJECT_ID,
     apiKey: API_KEY,
-});
+    auth: {
+        getUser: async () => null,
+        signInWithGoogle: async () => {},
+        signOut: async () => {},
+    },
+    collection: () => ({
+        find: async () => [],
+        findOne: async () => null,
+        create: async () => ({}),
+        update: async () => ({}),
+        delete: async () => {},
+    }),
+};
 
 /**
  * Proposed Schemas (Entities)
